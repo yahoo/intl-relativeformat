@@ -16,8 +16,6 @@ import {
     dateNow
 } from './es5';
 
-export default RelativeFormat;
-
 // -----------------------------------------------------------------------------
 
 var FIELDS = ['second', 'minute', 'hour', 'day', 'month', 'year'];
@@ -301,3 +299,5 @@ RelativeFormat.prototype._selectUnits = function (diffReport) {
 
     return units;
 };
+
+export default RelativeFormat;
