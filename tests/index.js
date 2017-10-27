@@ -157,6 +157,13 @@ describe('IntlRelativeFormat', function () {
                 expect(rf.format(future(30 * 24 * 60 * 60 * 1000))).to.equal('in 30 days');
             });
 
+            it('should output yesterday if the date is at 11:59:59pm the day and now is midnight', function () {
+                var midnight = (new Date(2017, 9, 2)).getTime();
+                var yesterday = midnight - 1;
+                var rf = new IntlRelativeFormat('en', {units: 'day'});
+                expect(rf.format(yesterday, { now: midnight })).to.equal('yesterday');
+            });
+
             it('should handle short unit formats', function () {
                 var rf = new IntlRelativeFormat('en', {units: 'minute-short'});
 
