@@ -37,7 +37,6 @@ module.exports = function (grunt) {
 
         extract_cldr_data: {
             options: {
-                pluralRules   : true,
                 relativeFields: true,
             },
 
