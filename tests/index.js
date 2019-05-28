@@ -409,27 +409,27 @@ describe('IntlRelativeFormat', function () {
 
             it('should return right now', function () {
                 var output = rf.format(now());
-                expect(output).to.equal('現在');
+                expect(output).to.equal('现在');
             });
 
             it('should return 1 second past', function () {
                 var output = rf.format(past(1000));
-                expect(output).to.equal('1 秒前');
+                expect(output).to.equal('1秒钟前');
             });
 
             it('should return 10 seconds future', function () {
                 var output = rf.format(future(10 * 1000));
-                expect(output).to.equal('10 秒後');
+                expect(output).to.equal('10秒钟后');
             });
 
             it('should return 3 minutes past', function () {
                 var output = rf.format(past(3 * 60 * 1000));
-                expect(output).to.equal('3 分鐘前');
+                expect(output).to.equal('3分钟前');
             });
 
             it('should return 3 minutes future', function () {
                 var output = rf.format(future(3 * 60 * 1000));
-                expect(output).to.equal('3 分鐘後');
+                expect(output).to.equal('3分钟后');
             });
 
             it('should return yesterday', function () {
@@ -439,7 +439,7 @@ describe('IntlRelativeFormat', function () {
 
             it('should return 2 days future', function () {
                 var output = rf.format(future(2 * 24 * 60 * 60 * 1000));
-                expect(output).to.equal('後天');
+                expect(output).to.equal('后天');
             });
         });
 
@@ -448,37 +448,37 @@ describe('IntlRelativeFormat', function () {
 
             it('should return right now', function () {
                 var output = rf.format(now());
-                expect(output).to.equal('現在');
+                expect(output).to.equal('现在');
             });
 
             it('should return 1 second past', function () {
                 var output = rf.format(past(1000));
-                expect(output).to.equal('1 秒前');
+                expect(output).to.equal('1秒钟前');
             });
 
             it('should return 10 seconds future', function () {
                 var output = rf.format(future(10 * 1000));
-                expect(output).to.equal('10 秒後');
+                expect(output).to.equal('10秒钟后');
             });
 
             it('should return 3 minutes past', function () {
                 var output = rf.format(past(3 * 60 * 1000));
-                expect(output).to.equal('3 分鐘前');
+                expect(output).to.equal('3分钟前');
             });
 
             it('should return 3 minutes future', function () {
                 var output = rf.format(future(3 * 60 * 1000));
-                expect(output).to.equal('3 分鐘後');
+                expect(output).to.equal('3分钟后');
             });
 
             it('should return yesterday', function () {
                 var output = rf.format(past(1 * 24 * 60 * 60 * 1000));
-                expect(output).to.equal('昨日');
+                expect(output).to.equal('昨天');
             });
 
             it('should return 2 days future', function () {
                 var output = rf.format(future(2 * 24 * 60 * 60 * 1000));
-                expect(output).to.equal('後日');
+                expect(output).to.equal('后天');
             });
         });
 
