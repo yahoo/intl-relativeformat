@@ -40,9 +40,9 @@ outputFileSync(
   resolve(__dirname, '../src/locales.js'),	
   `/* @generated */	
 import IntlRelativeFormat from "./core";\n
-${Object.keys(allLocaleFiles)	
-  .map(lang => `IntlRelativeFormat.__addLocaleData(${allLocaleFiles[lang]})`)	
-  .join(';\n')};	
+IntlRelativeFormat.__addLocaleData(${Object.keys(allLocaleFiles)	
+  .map(lang => allLocaleFiles[lang])	
+  .join(',\n')});	
 export default IntlRelativeFormat;	
   `	
 );	
